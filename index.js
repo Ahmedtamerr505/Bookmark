@@ -68,7 +68,7 @@ function deleteTable(deltedIndex){
 function validationInputs(element){
     var regix = {
         bookmarkName:/^[a-zA-Z]{3,}$/,
-        bookmarkURL:/^[a-zA-Z0-9]{2,}\.com$/,
+        bookmarkURL: /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/,
     };
     if(regix[element.id].test(element.value)){
         element.classList.add("is-valid");
